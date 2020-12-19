@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const schema = new Schema({
@@ -21,7 +21,7 @@ const schema = new Schema({
         type: Date,
     },
     deletedDate: {
-        type: Date
+        type: Date,
     }
 });
 

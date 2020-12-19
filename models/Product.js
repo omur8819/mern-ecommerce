@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const { model } = require('./Category');
 const { Schema } = mongoose;
 
 const schema = new Schema({
-    ProductName: {
+    productName: {
         type: String,
         required: true,
     },
@@ -11,15 +12,15 @@ const schema = new Schema({
     },
     imagePath: {
         type: String,
-        default: 'https://via.placeholder.com/250x250.png?text=No+Image'
+        default: 'https://via.placeholder.com/250x250.png?text=No+Image',
     },
     quantity: {
         type: Number,
-        default: 0
+        default: 0,
     },
     unitPrice: {
         type: Number,
-        default: 0
+        default: 0,
     },
     categoryId: {
         type: String,
@@ -36,8 +37,9 @@ const schema = new Schema({
         type: Date,
     },
     deletedDate: {
-        type: Date
-    }
+        type: Date,
+    },
+
 });
 
 module.exports = Product = mongoose.model('Product', schema);
